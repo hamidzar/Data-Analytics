@@ -4,8 +4,7 @@ Submitted By: Hamid Zarringhalam
 Date: november, 22nd, 2020
 
 ![average_salary_by_title.png](Images/average_salary_by_title.png)
-![average_salary_by_title.png](Images\average_salary_by_title.png)
-![average_salary_by_title.png](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Images/average_salary_by_title.png)
+
 Background
 This repository discusses a research project on the employee database at Pewlett Hackard Corporation from the 1980s and 1990s. All that remains of the database of employees from that period is in six CSV files.
 
