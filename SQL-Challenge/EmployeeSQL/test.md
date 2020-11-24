@@ -8,13 +8,15 @@ In this assignment I designed the tables to hold data in the CSVs, import the CS
 
 Data Engineering:
 This section is about creating the tables under the schema. The Schemal.Sql is under Data Engineering folder
+
 [Data Engineering](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Data%20Engineering)
 
 
 Data Analysis:
 This section is about the queries and analysis on the employee database at Pewlett Hackard Corporation from the 1980s and 1990s. The data of this period is stored in six CSV files under "Resources" folder.
 
-![Resources](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Resources)
+!
+[Resources](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Resources)
 
 The Analysis is stored under "Data Analysis" folder:
 
