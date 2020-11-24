@@ -2,8 +2,8 @@
 Employee Database-SQL: A Mystery in Two Parts
 Submitted By: Hamid Zarringhalam
 Date: november, 22nd, 2020
-![average_salary_by_title]
-![sql.png](sql.png)
+
+
 ![average_salary_by_title.png](Images\average_salary_by_title.png)
 
 Background
