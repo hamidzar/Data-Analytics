@@ -8,7 +8,7 @@ Submitted By: Hamid Zarringhalam
 In this assignment I designed the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. 
 
 ### Data Engineering:
-This section is about creating the tables under the schema. The Schemal.Sql is under Data Engineering folder
+This section is about creating the tables under the schema. The Schemal Sql file is under Data Engineering folder
 
 [Data Engineering](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Data%20Engineering)
 
@@ -18,7 +18,7 @@ This section is about the queries and analysis on the employee database at Pewle
 
 [Resources](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Resources)
 
-The Analysis is stored under "Data Analysis" folder:
+The Data Analysis sql file is stored under "Data Analysis" folder:
 
 [Data Analysis](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Data%20Analysis)
 
