@@ -1,5 +1,15 @@
+-- Data Engineering
+
+--DROP TABLE salary
+DROP TABLE IF EXISTS departments CASCADE;
+DROP TABLE IF EXISTS titles CASCADE;
+DROP TABLE IF EXISTS employees CASCADE;
+DROP TABLE IF EXISTS dept_emp CASCADE;
+DROP TABLE IF EXISTS dept_manager CASCADE;
+DROP TABLE IF EXISTS salaries CASCADE;
+
 -- Create tables and insert values
---DROP TABLE salary;
+
 CREATE TABLE employees (
  	emp_no INT NOT NULL,
 	PRIMARY KEY (emp_no),
@@ -24,14 +34,6 @@ CREATE TABLE salaries (
 	salary INT NOT NULL
 );
 
-SELECT * FROM titles;
-SELECT * FROM employees;
-SELECT * FROM salaries;
-
- --DROP TABLE salaries CASCADE;
--- DROP TABLE dept_manager CASCADE;
--- DROP TABLE dept_emp CASCADE;
-
 CREATE TABLE departments (
 	dept_no VARCHAR NOT NULL,
 	PRIMARY KEY (dept_no),
@@ -52,9 +54,10 @@ CREATE TABLE dept_emp (
 	FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 
-SELECT * FROM dept_manager;
+-- Viewing the tables 
 SELECT * FROM departments;
+SELECT * FROM titles;	
+SELECT * FROM employees;	
 SELECT * FROM dept_emp;
-
-
-select * from departments
+SELECT * FROM dept_manager;	
+SELECT * FROM salaries;
