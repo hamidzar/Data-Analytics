@@ -7,12 +7,19 @@ Submitted By: Hamid Zarringhalam
 In this assignment I designed the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. 
 
 Data Engineering:
-This is about creating the tables under the schema. The Schemal.Sql is under Data Engineering folder
+This section is about creating the tables under the schema. The Schemal.Sql is under Data Engineering folder
 ![Data Engineering](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Data%20Engineering)
 
 
 Data Analysis:
-This repository discusses a research project on the employee database at Pewlett Hackard Corporation from the 1980s and 1990s. All that remains of the database of employees from that period is in six CSV files.
+This section is about the queries and analysis on the employee database at Pewlett Hackard Corporation from the 1980s and 1990s. The data of this period is stored in six CSV files under "Resources" folder.
+
+![Resources](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Resources)
+
+The Analysis is stored under "Data Analysis" folder:
+
+![Data Analysis](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Data%20Analysis)
+
 
 In this project, a table was created that holds employees data in the CSVs, import the CSVs into a SQL database, and the data exploration was conducted to answer the research questions, and discussed in the following parts:
 
