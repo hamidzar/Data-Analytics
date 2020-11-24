@@ -8,7 +8,7 @@ In this assignment I designed the tables to hold data in the CSVs, import the CS
 
 Data Engineering:
 This section is about creating the tables under the schema. The Schemal.Sql is under Data Engineering folder
-![Data Engineering](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Data%20Engineering)
+[Data Engineering](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Data%20Engineering)
 
 
 Data Analysis:
