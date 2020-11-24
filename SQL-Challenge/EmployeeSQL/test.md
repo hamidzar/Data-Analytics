@@ -38,4 +38,5 @@ In this section, I imported the data to Pandas and created a histogram to visual
 a bar chart of average salary by title.
 
 [Pandas code](https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/EmployeeDB-Validation.ipynb)
+
 [Output](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Images)
