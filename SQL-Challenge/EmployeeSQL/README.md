@@ -27,7 +27,7 @@ In this project, tables were created with the relative filed in the CSV files, t
 
 1-List the following details of each employee: employee number, last name, first name, sex, and salary.
 
-![Pic1](\Images\SQL-Query-01.png)
+![Pic1](https://github.com/hamidzar/Data-Analytics/tree/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-01.png)
 
 
 ![Pic1](..\Images\SQL-Query-01.png)
