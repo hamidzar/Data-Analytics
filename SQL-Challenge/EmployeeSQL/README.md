@@ -30,7 +30,7 @@ In this project, tables were created with the relative filed in the CSV files, t
 ![Pic1](/Images/SQL-Query-01.png)
 
 
-![Pic1](Images/SQL-Query-01.png)
+![Pic1](..\Images\SQL-Query-01.png)
 
 2-List first name, last name, and hire date for employees who were hired in 1986.
 
