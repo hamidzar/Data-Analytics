@@ -31,31 +31,31 @@ In this project, tables were created with the relative filed in the CSV files, t
 
 2-List first name, last name, and hire date for employees who were hired in 1986.
 
-https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-02.PNG
+![SQL-Query-02]https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-02.PNG
 
 3-List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 
-https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-03.PNG
+![SQL-Query-03]https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-03.PNG
 
 4-List the department of each employee with the following information: employee number, last name, first name, and department name.
 
-https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-04.PNG
+![SQL-Query-04]https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-04.PNG
 
 5-List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
-https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-05.PNG
+![SQL-Query-05]https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-05.PNG
 
 6-List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
-https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-06.PNG
+![SQL-Query-06]https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-06.PNG
 
 7-List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
-https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-07.PNG
+![SQL-Query-07]https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-07.PNG
 
 8-In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
-https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-08.PNG
+![SQL-Query-08]https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-08.PNG
 
 ### Data Modeling:
 
