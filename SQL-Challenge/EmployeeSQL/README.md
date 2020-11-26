@@ -25,6 +25,29 @@ The Data Analysis sql file is stored under "Data Analysis" folder:
 
 In this project, tables were created with the relative filed in the CSV files, then imported the CSVs into a SQL database under the tables, and the data queries was conducted to answer the questions.
 
+1-List the following details of each employee: employee number, last name, first name, sex, and salary.
+![sql](Image/SQL-Query-01)
+
+2-List first name, last name, and hire date for employees who were hired in 1986.
+
+
+3-List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+
+
+4-List the department of each employee with the following information: employee number, last name, first name, and department name.
+
+
+5-List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
+
+
+6-List all employees in the Sales department, including their employee number, last name, first name, and department name.
+
+
+7-List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+
+
+8-In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+
 ### Data Modeling:
 
 To model the employee data, ERD data modeling technique calledwhich is called Entity-Relationship Diagrams (ERD) is used.
