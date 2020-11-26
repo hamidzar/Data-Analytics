@@ -27,14 +27,14 @@ In this project, tables were created with the relative filed in the CSV files, t
 
 1-List the following details of each employee: employee number, last name, first name, sex, and salary.
 
-![SQL-Query-01](../Images/SQL-Query-01.png)
 
 
-![SQL-Query-01](Images/SQL-Query-01.png)
 
-![SQL-Query-01](Images\SQL-Query-01.png)
+![SQL-Query-01](/Images/SQL-Query-01.png)
 
-![SQL-Query-01](..\Images\SQL-Query-01.png)
+![SQL-Query-01](\Images\SQL-Query-01.png)
+
+![SQL-Query-01](/Images\SQL-Query-01.png)
 
 2-List first name, last name, and hire date for employees who were hired in 1986.
 
