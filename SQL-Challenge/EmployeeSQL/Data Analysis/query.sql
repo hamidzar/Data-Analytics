@@ -54,10 +54,10 @@ ON employees.emp_no = dept_emp.emp_no
 WHERE departments.dept_name = 'Sales' OR departments.dept_name = 'Development';
 
 -- 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
-Select last_name,count(last_name) as "frequency"
+Select last_name,count(last_name) as "share"
 FROM employees
 GROUP BY last_name 
-ORDER BY frequency DESC ;
+ORDER BY share DESC ;
 
 --9.Epilogue: "Search your ID number." You look down at your badge to see that your employee ID number is 499942
 SELECT last_name as "Last Name", first_name as "First Name"
