@@ -26,7 +26,10 @@ The Data Analysis sql file is stored under "Data Analysis" folder:
 In this project, tables were created with the relative filed in the CSV files, then imported the CSVs into a SQL database under the tables, and the data queries was conducted to answer the questions.
 
 1-List the following details of each employee: employee number, last name, first name, sex, and salary.
-![sql](Image/SQL-Query-01)
+
+![Pic1](Images/SQL-Query-01)
+
+
 
 2-List first name, last name, and hire date for employees who were hired in 1986.
 
