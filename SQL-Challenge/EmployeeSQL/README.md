@@ -30,11 +30,9 @@ In this project, tables were created with the relative filed in the CSV files, t
 
 
 
-![SQL-Query-01](/Images/SQL-Query-01.png)
+![SQL-Query-01](https://github.com/hamidzar/Data-Analytics/blob/master/SQL-Challenge/EmployeeSQL/Images/SQL-Query-01.PNG)
 
-![SQL-Query-01](\Images\SQL-Query-01.png)
 
-![SQL-Query-01](/Images\SQL-Query-01.png)
 
 2-List first name, last name, and hire date for employees who were hired in 1986.
 
