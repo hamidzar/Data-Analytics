@@ -60,7 +60,6 @@ def precipitation():
 
     return jsonify(precipitation)
 
-
 @app.route("/api/v1.0/stations")
 def stations():
     # Create our session (link) from Python to the DB
