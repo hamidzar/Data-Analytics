@@ -8,10 +8,8 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify
 
-
-#################################################
 # Database Setup
-#################################################
+
 engine = create_engine("sqlite:///Resources/hawaii.sqlite")
 
 # reflect an existing database into a new model
@@ -23,16 +21,11 @@ Base.prepare(engine, reflect=True)
 Measurement = Base.classes.measurement
 Station = Base.classes.station
 
-
-#################################################
 # Flask Setup
-#################################################
+
 app = Flask(__name__)
 
-
-#################################################
 # Flask Routes
-#################################################
 
 @app.route("/")
 def welcome():
