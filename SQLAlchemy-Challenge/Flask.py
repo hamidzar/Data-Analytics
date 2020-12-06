@@ -42,8 +42,8 @@ def welcome():
         f"<a href='api/v1.0/precipitation'>Precipitation</a><br/>"
         f"<a href='api/v1.0/stations'>List of Stations</a><br/>"
         f"<a href='api/v1.0/tobs'>Temperature</a><br/>"
-        f"Temperature from the start date:/api/v1.0/<start><br/>"
-        f"Temperature from start to end date:/api/v1.0/<start>/<end>"
+        f"<a href ='/api/v1.0/<start>'>Temperature from the start date<br/>"
+        f"<a href ='/api/v1.0/<start>/<end>'>Temperature from start to end date<br/>"
     )
 
 @app.route("/api/v1.0/precipitation")
@@ -93,14 +93,20 @@ def stations():
 
 @app.route("/api/v1.0/tobs")
 def tobs():
+    # Create our session (link) from Python to the DB
     session = Session(engine)
-    Last_Date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()
-    year_back = dt.date(2017,8,23) - dt.timedelta(days=365)
-    temper_result =  session.query(Measurement.date,Measurement.tobs).\
-                                 filter(Measurement.date >= year_back).all()
+
+    # Get the last date contained in the dataset and date from one year ago
+    last_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()[0]
+    last_date = dt.datetime.strptime(last_date, "%Y-%m-%d")
+    one_year_back = last_date - dt.timedelta(days=365)
+
+    # Query for the dates and temperature values
+    temper_results = (session.query(Measurement.date, Measurement.tobs).\
+                filter(Measurement.date >= one_year_back).order_by(Measurement.date).all())
     session.close()
 
-    return jsonify(temper_result)
+    return jsonify(temper_results)
 
 @app.route("/api/v1.0/<start>")
 def temp_start(start):
@@ -108,44 +114,27 @@ def temp_start(start):
     # Create our session (link) from Python to the DB
     session = Session(engine)
     
-    results = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).\
-        filter(Measurement.date >= start).all()
-
-    big_list = []
-    for date, min, avg, max in results:
-        tobs_dict = {}
-        tobs_dict["Date"] = date
-        tobs_dict["TMIN"] = min
-        tobs_dict["TAVG"] = avg
-        tobs_dict["TMAX"] = max
-        big_list.append(tobs_dict)
-
-    session.close()    
-
-    return jsonify(big_list)
+    startdate_formated = dt.datetime.strptime(start,"%Y-%m-%d")
+    stats_temp = session.query(func.max(Measurement.tobs),func.min(Measurement.tobs),func.avg(Measurement.tobs))\
+    .filter(Measurement.date > startdate_formated ).all()
+    session.close()  
+    return jsonify(max=stats_temp[0][0], min=stats_temp[0][1], avg=stats_temp[0][2])
+  
 
 @app.route("/api/v1.0/<start>/<end>")
 def temp_start_end(start,end):
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
-    results = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).\
-        filter(Measurement.date >= start).filter(Measurement.date <= end).group_by(Measurement.date).all()
+    startdate_formated = dt.datetime.strptime(start,"%Y-%m-%d")
+    enddate_formated = dt.datetime.strptime(end,"%Y-%m-%d")
+    if (enddate_formated < startdate_formated):
+        return f"start date {start} after end date {end}"
+    stats_temp = session.query(func.max(Measurement.tobs),func.min(Measurement.tobs),func.avg(Measurement.tobs))\
+    .filter(Measurement.date > startdate_formated ).filter(Measurement.date <= enddate_formated).all()
+    session.close() 
+    return jsonify(max=stats_temp[0][0], min=stats_temp[0][1], avg=stats_temp[0][2])
+
     
-    big_list = []
-    for date, min, avg, max in results:
-        tobs_dict = {}
-        tobs_dict["Date"] = date
-        tobs_dict["TMIN"] = min
-        tobs_dict["TAVG"] = avg
-        tobs_dict["TMAX"] = max
-        
-        big_list.append(tobs_dict)
-
-    session.close()    
-
-    return jsonify(big_list)      
-
-
 if __name__ == '__main__':
     app.run(debug=True)
