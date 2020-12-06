@@ -111,8 +111,7 @@ def temp_start(start):
     .filter(Measurement.date > startdate_formated ).all()
     session.close()  
     return jsonify(max=stats_temp[0][0], min=stats_temp[0][1], avg=stats_temp[0][2])
-  
-
+ 
 @app.route("/api/v1.0/<start>/<end>")
 def temp_start_end(start,end):
     # Create our session (link) from Python to the DB
@@ -126,7 +125,6 @@ def temp_start_end(start,end):
     .filter(Measurement.date > startdate_formated ).filter(Measurement.date <= enddate_formated).all()
     session.close() 
     return jsonify(max=stats_temp[0][0], min=stats_temp[0][1], avg=stats_temp[0][2])
-
     
 if __name__ == '__main__':
     app.run(debug=True)
