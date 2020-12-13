@@ -14,3 +14,38 @@ h1,h2
 {
  color: lightseagreen; 
 }
+
+td
+{
+  text-align: left;
+  left: 0%;
+}
+
+tr
+{
+  text-align: left;
+}
+
+th
+{
+  text-align: left;
+}
+
+.borderless {
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+}
+h3
+{
+  color: lightseagreen; 
+  font-size: 20px;
+  text-align: center
+  
+}
+img
+{
+align-content: center ;
+
+}
