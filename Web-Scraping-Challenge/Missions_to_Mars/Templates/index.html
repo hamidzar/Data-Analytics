@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mission to Mars</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center" style="background-color:lightskyblue; color: white";>
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12" style="background-color: white; margin-top: 10px; border-style: outset;">
+                <div class ="panel panel-default">
+                    <div class="panel-body">
+                        <br>
+                        <h2>Latest Mars News</h2>
+                        <h4>{{datapage.news_title}}</h4>
+                        <p>{{datapage.news_para}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style= "margin-top: 20px">
+            <div class="col-sm-8" style="background-color: white;">
+                <div class ="panel panel-default">
+                    <div class="panel-body">
+                        <br>
+                        <h2>Featured Mars Image</h2>
+                        <img src="{{datapage.featured_image}}" alt="Featured_Mars_Image" class="img-fluid"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="background-color: white;">
+                <div class="row">
+                    <div class ="panel panel-default">
+                        <div class="panel-body">
+                            <br>
+                            <h3>Mars Facts</h3>
+                            <table style="width:100%;">
+                                {{datapage.facts_html | safe}}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12" style="background-color: black; color: white; margin-top: 50px">
+                <h2>Mars Hemispheres</h2>
+            </div>
+            {% for hemisphere in datapage.hemisphere_image_urls %}
+                <div class="col-md-6" style="background-color: lightgrey;">
+                    <div class ="panel panel-default">
+                        <div class="panel-body">
+                            <br>
+                            <img src="{{hemisphere.img_url}}" alt="Featured_Mars_Image" class="img-fluid"></a>
+                            <h5>{{hemisphere.title}}</h5>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}         
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
