@@ -14,9 +14,12 @@ function runEnter() {
   d3.event.preventDefault();
   // Select the input element and get the raw HTML node
   var inputElement = d3.select("#datetime");
+  var inputElement_city = d3.select("#city");
   // Get the value property of the input element
   var inputValue = inputElement.property("value");
+  var inputValue_city = inputElement_city.property("value");
   console.log(inputValue);
+  console.log(inputValue_city);
   console.log(tableData);
   //var filteredData = tableData.filter(info => info.datetime == inputValue);
   ///console.log(filteredData);
@@ -26,7 +29,7 @@ function runEnter() {
   var filterData = tableData.filter(info => info.datetime == inputValue);   
 data.forEach((tableData) => {
    
-    if (tableData.datetime == inputValue){
+    if ((tableData.datetime == inputValue) | (tableData.city == inputValue_city)){
     
     var row = tbody.append("tr");
     Object.entries(tableData).forEach(([key, value]) => {
