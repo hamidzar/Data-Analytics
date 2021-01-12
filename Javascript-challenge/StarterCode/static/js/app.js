@@ -29,21 +29,24 @@ function runEnter() {
   // BONUS: Calculate summary statistics for the age field of the filtered data
   // First, create an array with just the age values
   //var cities = filteredData.map(info => info.city);
+  tbody.html("")
   var filterData = tableData.filter(info => info.datetime == inputValue);   
 data.forEach((tableData) => {
-   
-    if ((tableData.datetime == inputValue) | (tableData.city == inputValue_city) | (tableData.state == inputValue_state)){
-    
-    var row = tbody.append("tr");
-    Object.entries(tableData).forEach(([key, value]) => {
-    var cell = row.append("td");
-    cell.text(value);
+    if ((inputValue !== "") || (inputValue_city !== " ") || (inputValue_state !== " ")){
+
+        if ((tableData.datetime == inputValue) || (tableData.city == inputValue_city) || (tableData.state == inputValue_state)){
+            var row = tbody.append("tr");
+            Object.entries(tableData).forEach(([key, value]) => {
+            var cell = row.append("td");
+            cell.text(value);
     });
   };
+};
 });
  
 
 };
+
 
 
 
