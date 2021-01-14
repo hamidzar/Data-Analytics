@@ -32,9 +32,21 @@ function runEnter() {
   tbody.html("")
   var filterData = tableData.filter(info => info.datetime == inputValue);   
 data.forEach((tableData) => {
-    if ((inputValue !== "") || (inputValue_city !== " ") || (inputValue_state !== " ")){
 
-        if ((tableData.datetime == inputValue) || (tableData.city == inputValue_city) || (tableData.state == inputValue_state)){
+  if ((inputValue !== "") && (inputValue_state == "") && (inputValue_city == "")){
+
+    if ((tableData.datetime == inputValue)){
+        var row = tbody.append("tr");
+        Object.entries(tableData).forEach(([key, value]) => {
+        var cell = row.append("td");
+        cell.text(value);
+      });
+    };
+  };
+
+    if ((inputValue !== "") && (inputValue_state !== "") && (inputValue_city == "")){
+
+        if ((tableData.datetime == inputValue) && (tableData.state == inputValue_state)){
             var row = tbody.append("tr");
             Object.entries(tableData).forEach(([key, value]) => {
             var cell = row.append("td");
@@ -42,6 +54,23 @@ data.forEach((tableData) => {
     });
   };
 };
+
+
+    if ((inputValue !== "") && (inputValue_state !== "") && (inputValue_city !== "")){
+
+      if ((tableData.datetime == inputValue) && (tableData.state == inputValue_state) && (tableData.city == inputValue_city)){
+          var row = tbody.append("tr");
+          Object.entries(tableData).forEach(([key, value]) => {
+          var cell = row.append("td");
+          cell.text(value);
+    });
+  };
+};
+
+
+
+
+
 });
  
 
