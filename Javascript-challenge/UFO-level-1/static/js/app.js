@@ -18,15 +18,10 @@ function runEnter() {
   // Get the value property of the input element
   var inputValue = inputElement.property("value");
  
-  console.log(inputValue);
-  console.log(tableData);
-  //var filteredData = tableData.filter(info => info.datetime == inputValue);
-  ///console.log(filteredData);
-  // BONUS: Calculate summary statistics for the age field of the filtered data
-  // First, create an array with just the age values
-  //var cities = filteredData.map(info => info.city);
+  //Refreshing the page for the new filter / query 
   tbody.html("")
-  var filterData = tableData.filter(info => info.datetime == inputValue);   
+
+// Generate output based on the date
 data.forEach((tableData) => {
    
         if ((tableData.datetime == inputValue)){
