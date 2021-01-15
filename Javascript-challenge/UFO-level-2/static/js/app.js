@@ -35,64 +35,40 @@ data.forEach((tableData) => {
 
   if ((inputValue_date !== "") && (inputValue_state == "") && (inputValue_city == "")){
     if ((tableData.datetime == inputValue_date)){
-        var row = tbody.append("tr");
-        Object.entries(tableData).forEach(([key, value]) => {
-        var cell = row.append("td");
-        cell.text(value);
-      });
+      populate_table (tableData);
     };
   };
 
 
   if ((inputValue_date == "") && (inputValue_state !== "") && (inputValue_city == "")){
     if ((tableData.state == inputValue_state)){
-        var row = tbody.append("tr");
-        Object.entries(tableData).forEach(([key, value]) => {
-        var cell = row.append("td");
-        cell.text(value);
-      });
+      populate_table (tableData);
     };
   };
 
 
   if ((inputValue_date == "") && (inputValue_state == "") && (inputValue_city !== "")){
     if ((tableData.city == inputValue_city)){
-        var row = tbody.append("tr");
-        Object.entries(tableData).forEach(([key, value]) => {
-        var cell = row.append("td");
-        cell.text(value);
-      });
+      populate_table (tableData);
     };
   };
 
     if ((inputValue_date !== "") && (inputValue_state !== "") && (inputValue_city == "")){
         if ((tableData.datetime == inputValue_date) && (tableData.state == inputValue_state)){
-            var row = tbody.append("tr");
-            Object.entries(tableData).forEach(([key, value]) => {
-            var cell = row.append("td");
-            cell.text(value);
-    });
+          populate_table (tableData);
   };
 };
 
 if ((inputValue_date !== "") && (inputValue_state == "") && (inputValue_city !== "")){
   if ((tableData.datetime == inputValue_date) && (tableData.city == inputValue_city)){
-      var row = tbody.append("tr");
-      Object.entries(tableData).forEach(([key, value]) => {
-      var cell = row.append("td");
-      cell.text(value);
-    });
+    populate_table (tableData);
   };
 };
 
 
 if ((inputValue_date == "") && (inputValue_state !== "") && (inputValue_city !== "")){
   if ((tableData.state == inputValue_state) && (tableData.city == inputValue_city)){
-      var row = tbody.append("tr");
-      Object.entries(tableData).forEach(([key, value]) => {
-      var cell = row.append("td");
-      cell.text(value);
-    });
+    populate_table (tableData);
   };
 };
 
@@ -100,20 +76,23 @@ if ((inputValue_date == "") && (inputValue_state !== "") && (inputValue_city !==
 
     if ((inputValue_date !== "") && (inputValue_state !== "") && (inputValue_city !== "")){
       if ((tableData.datetime == inputValue_date) && (tableData.state == inputValue_state) && (tableData.city == inputValue_city)){
-          var row = tbody.append("tr");
-          Object.entries(tableData).forEach(([key, value]) => {
-          var cell = row.append("td");
-          cell.text(value);
-    });
-  };
+          populate_table (tableData); 
+    };
 };
-
-
-
 
 
 });
  
+
+function populate_table (tableData) {
+
+  var row = tbody.append("tr");
+  Object.entries(tableData).forEach(([key, value]) => {
+  var cell = row.append("td");
+  cell.text(value);
+  });
+
+}
 
 };
 
