@@ -24,8 +24,7 @@ function runEnter() {
   console.log(inputValue_city);
   console.log(inputValue_state);
   console.log(tableData);
-  //var filteredData = tableData.filter(info => info.datetime == inputValue);
-  ///console.log(filteredData);
+  
   // BONUS: Calculate summary statistics for the age field of the filtered data
   // First, create an array with just the age values
   //var cities = filteredData.map(info => info.city);
@@ -65,14 +64,11 @@ if ((inputValue_date !== "") && (inputValue_state == "") && (inputValue_city !==
   };
 };
 
-
 if ((inputValue_date == "") && (inputValue_state !== "") && (inputValue_city !== "")){
   if ((tableData.state == inputValue_state) && (tableData.city == inputValue_city)){
     populate_table (tableData);
   };
 };
-
-
 
     if ((inputValue_date !== "") && (inputValue_state !== "") && (inputValue_city !== "")){
       if ((tableData.datetime == inputValue_date) && (tableData.state == inputValue_state) && (tableData.city == inputValue_city)){
@@ -80,12 +76,9 @@ if ((inputValue_date == "") && (inputValue_state !== "") && (inputValue_city !==
     };
 };
 
-
 });
- 
 
 function populate_table (tableData) {
-
   var row = tbody.append("tr");
   Object.entries(tableData).forEach(([key, value]) => {
   var cell = row.append("td");
