@@ -107,4 +107,9 @@ function Main(sample){
             dropdown.append("option").text(name).property("value");
         });
     
-        
+        //Calling the functions to display the data and the plots to the page
+        plots(data.names[0]);
+        Main(data.names[0]);
+    });
+  };
+  
