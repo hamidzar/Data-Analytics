@@ -45,3 +45,19 @@ function Main(sample){
 
         // Data array for the plot
         var data1 = [trace1];
+        // Setting the Layout variable for plots layout
+        var layout = {
+            title: "Top 10 OTU",
+            yaxis:{
+                tickmode:"linear",
+            },
+            margin: {
+                l: 100,
+                r: 100,
+                t: 30,
+                b: 20
+            }
+        };
+                    
+        // Ploting the chart with a div tag and id "bar"
+        Plotly.newPlot("bar", data1, layout);
