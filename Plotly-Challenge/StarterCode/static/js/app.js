@@ -21,4 +21,17 @@ function Main(sample){
   
   };
   
+  function plots(sample){
+    d3.json("samples.json").then((data) => {
+        console.log(data)
   
+        var metadata = data.samples;
+        var metadataFiltered = metadata.filter(d =>d.id == sample)[0];
+        var otuID = metadataFiltered.otu_ids.slice(0, 10).reverse() ;
+        console.log(otuID)
+        var otuString= otuID.map(d => `otu ${d}`)
+        console.log(otuString)
+        var Label= metadataFiltered.otu_labels.slice(0, 10);
+        var Values = metadataFiltered.sample_values.slice(0, 10).reverse();
+  
+        // Preparing the Chart for bar Chart
