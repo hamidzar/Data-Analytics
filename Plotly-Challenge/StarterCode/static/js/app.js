@@ -113,3 +113,9 @@ function Main(sample){
     });
   };
   
+  function optionChanged(sample){
+    plots(sample);
+    Main(sample);
+  };
+  
+  dropDownID();
