@@ -1,4 +1,4 @@
-//getting the Data from samples.json file
+//function to display the data under Demographic Info
 function Main(sample){
     d3.json("samples.json").then((data) => {
         //Configuring variables and assigniing the related fileds to the variables
@@ -20,7 +20,7 @@ function Main(sample){
     });
   
   };
-  
+  //Function for Ploting the data
   function plots(sample){
       d3.json("samples.json").then((data) => {
           console.log(data)
@@ -89,4 +89,17 @@ function Main(sample){
               width: 1300
           };
     
+          // Creating the data variable 
+          var data2 = [trace2];
+    
+          // Cresting the bubble plot
+          Plotly.newPlot("bubble", data2, layout); 
+      }
+    )};
+    //dropdown Menu 
+    function dropDownID(){
+      var dropdown = d3.select("#selDataset");
+      d3.json("samples.json").then((data)=> {
+          console.log(data)
+      
           
