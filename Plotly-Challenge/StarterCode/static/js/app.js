@@ -102,4 +102,9 @@ function Main(sample){
       d3.json("samples.json").then((data)=> {
           console.log(data)
       
-          
+          //Values for dropdown menu
+          data.names.forEach(function(name) {
+            dropdown.append("option").text(name).property("value");
+        });
+    
+        
