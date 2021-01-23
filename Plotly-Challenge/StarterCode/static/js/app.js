@@ -35,3 +35,13 @@ function Main(sample){
         var Values = metadataFiltered.sample_values.slice(0, 10).reverse();
   
         // Preparing the Chart for bar Chart
+        var trace1 = {
+            x: Values,
+            y: otuString,
+            text: Label,
+            type:"bar",
+            orientation: "h",
+            };
+
+        // Data array for the plot
+        var data1 = [trace1];
