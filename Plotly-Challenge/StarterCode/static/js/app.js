@@ -16,6 +16,19 @@ function Main(sample){
         graphData.append("h5").text(`location: ${metadataFiltered.location}`);
         graphData.append("h5").text(`bbtype: ${metadataFiltered.bbtype}`);
         graphData.append("h5").text(`wfreq: ${metadataFiltered.wfreq}`);
+
+        //Belly Button Washing Frequency Gauge
+        var data = [
+            {
+                value: metadataFiltered.wfreq,
+                title: { text: "Belly Button Washing Frequency" },
+                type: "indicator",
+                mode: "gauge+number"
+            }
+        ];
+    
+        var layout = { width: 600, height: 500, margin: { t: 0, b: 0 } };
+        Plotly.newPlot('gauge', data, layout);
        
     });
   
