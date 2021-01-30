@@ -24,3 +24,7 @@ var chartGroup = svg.append("g")
 
 // Parameters
 var chartData = null;
+var chosenXAxis = 'poverty'
+var chosenYAxis = 'healthcare'
+
+var xAxisLabels = ["poverty", "age", "income"];
