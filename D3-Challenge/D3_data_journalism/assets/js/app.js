@@ -17,3 +17,10 @@ var svg = d3.select("#scatter")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
+
+  //append an SVG group
+var chartGroup = svg.append("g")
+.attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+// Parameters
+var chartData = null;
