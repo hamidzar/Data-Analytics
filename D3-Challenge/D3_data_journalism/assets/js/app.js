@@ -170,15 +170,15 @@ d3.csv("assets/data/data.csv").then(function(healthData) {
 
     var povertyLabel = labelsGroup.append("text")
         .attr("x", 0)
-        .attr("y", 0)
+        .attr("y", (margin.top))
         .attr("value", "poverty") // value to grab for event listener.
         .classed("active", true)
         .text("In Poverty (%)");
     
     var healthcareLabel = labelsGroup.append("text")
         .attr("transform", "rotate(-90)")
-        .attr("x", (margin.left) * 2.8)
-        .attr("y", 0 - (height+12))
+        .attr("x", (margin.left) * 2.5)
+        .attr("y", 0 - (height+20))
         .attr("value", "healthcare") // value to grab for event listener.
         .classed("active", true)
         .text("Lacks Healthcare (%)");
