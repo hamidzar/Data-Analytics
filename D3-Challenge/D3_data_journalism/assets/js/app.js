@@ -62,15 +62,15 @@ function renderText(circletextGroup, newXScale, newYScale, chosenXAxis, chosenYA
 function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
 
     // X Axis
-    if (chosenXAxis === "poverty") {
-        var xlabel = "Poverty: ";
-    }
+    // if (chosenXAxis === "poverty") {
+         var xlabel = "Poverty: ";
+    // }
     
   
-    // Y Axis
-    if (chosenYAxis === "healthcare") {
-        var ylabel = "Lacks Healthcare: ";
-    }
+    // // Y Axis
+    // if (chosenYAxis === "healthcare") {
+         var ylabel = "Lacks Healthcare: ";
+    // }
     
 
     var toolTip = d3.tip()
