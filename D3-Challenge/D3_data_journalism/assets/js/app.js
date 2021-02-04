@@ -123,9 +123,8 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
   }
 
   var toolTip = d3.tip()
+  //Use Tooltip class in Style
   .attr("class", "tooltip")
-  // .style("background", "black")
-  // .style("color", "white")
   .offset([120, -60])
   .html(function(d) {
       if (chosenXAxis === "age") {
