@@ -150,7 +150,7 @@ d3.csv("assets/data/data.csv").then(function(healthData) {
     .attr("cx", d => xLinearScale(d[chosenXAxis]))
     .attr("cy", d => yLinearScale(d[chosenYAxis]))
     .attr("r", "15")
-    .attr("fill", "pink")
+    .attr("fill", "lightblue")
     .attr("opacity", ".5");
 
     // Add State abbr. text to circles. and some offset to y
