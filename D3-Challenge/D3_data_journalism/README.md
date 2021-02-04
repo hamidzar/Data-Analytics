@@ -1,4 +1,5 @@
 # D3 Homework - Data Journalism and D3
+## In this Homework I completed the Main part of the Assignment + Bonus #2
 
 ![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
 
