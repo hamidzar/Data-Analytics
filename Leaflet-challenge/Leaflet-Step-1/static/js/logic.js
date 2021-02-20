@@ -73,3 +73,24 @@ layer.bindPopup("Earthquake Magnitude: " + feature.properties.mag + "<br>Earthqu
 }).addTo(myMap);
 
 //legend 
+var legend = L.control({ position: 'bottomright' });
+
+legend.onAdd = function (map) {
+  
+  var div = L.DomUtil.create('div', 'info legend'),
+    //Magnitude 
+    grades = [1, 2, 3, 4, 5, 6];
+  div.innerHTML = 'Eathquake<br>Magnitude<br><hr>'
+
+  for (var i = 0; i < grades.length; i++) {
+    div.innerHTML +=
+      
+      '<i style="background:' + getColor(grades[i] + 1) + '">&nbsp&nbsp&nbsp&nbsp</i> ' +
+      grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+  }
+
+  return div;
+};
+
+legend.addTo(myMap);
+});
