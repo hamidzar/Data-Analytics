@@ -49,3 +49,19 @@ d3.json(geodata_url, function(data) {
         return "#98ee00";
     }
   }
+   // Function for the radius of the earthquake marker related to its magnitude.
+  
+   function getRadius(magnitude) {
+    if (magnitude === 0) {
+        return 1;
+    }
+    return magnitude * 4;
+    }
+  
+    // GeoJSON layer with the retrieved data
+L.geoJSON(data, {
+pointToLayer: function (feature, latlong) {
+    return L.circleMarker(latlong);
+    },
+
+style: styleInfo,
