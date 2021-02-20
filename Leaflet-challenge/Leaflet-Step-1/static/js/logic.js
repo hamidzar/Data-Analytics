@@ -18,3 +18,34 @@ var geodata_url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all
 // Fetching the data 
 d3.json(geodata_url, function(data) {
     console.log("Inside function to grab geojson data")
+
+    // functions for calculating the color and radius.
+  function styleInfo(feature) {
+    return {
+      opacity: 1,
+      fillOpacity: 1,
+      fillColor: getColor(feature.properties.mag),
+      color: "#000000",
+      radius: getRadius(feature.properties.mag),
+      stroke: true,
+      weight: 0.5
+    };
+  }
+
+  // Function for Color of the marker related to the magnitude of the earthquake.
+  function getColor(magnitude) {
+    switch (true) {
+      case magnitude > 5:
+        return "#cc00ee";
+      case magnitude > 4:
+        return "#ea2c2c";
+      case magnitude > 3:
+        return "#ff833d";
+      case magnitude > 2:
+        return "#eecc00";
+      case magnitude > 1:
+        return "#d4ee00";
+      default:
+        return "#98ee00";
+    }
+  }
