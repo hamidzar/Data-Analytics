@@ -94,6 +94,27 @@ function createMap() {
     });
 
     
+    L.control.layers(baseLayers, overlays).addTo(mymap);
+ 
+    var legend = L.control({ position: 'bottomright' });
+
+    legend.onAdd = function (map) {
+
+        var div = L.DomUtil.create('div', 'info legend'),
+            magnitude = [1, 2, 3, 4, 5,6],
+            labels = [];
+
+        div.innerHTML += "<h4 style='margin:4px'>Magnitude</h4>"
+
+         for (var i = 0; i < magnitude.length; i++) {
+             div.innerHTML +=
+             '<div class="color-box" align="center" style= background-color:' + Color(magnitude[i] + 1) + ' >'
+             + magnitude[i] + (magnitude[i + 1] ? '&ndash;' + magnitude[i + 1] + '<br>' : '+')
+        }
+
+        return div;
+    };
+    legend.addTo(mymap);
 }
     function Color(magnitude) {
         if (magnitude > 5) {

@@ -79,14 +79,14 @@ legend.onAdd = function (map) {
   
   var div = L.DomUtil.create('div', 'info legend'),
     //Magnitude 
-    grades = [1, 2, 3, 4, 5];
+    magnitude = [1, 2, 3, 4, 5];
   div.innerHTML = 'Eathquake<br>Magnitude<br><hr>'
 
-  for (var i = 0; i < grades.length; i++) {
+  for (var i = 0; i < magnitude.length; i++) {
     div.innerHTML +=
       
-      '<i style="background:' + getColor(grades[i] + 1) + '">&nbsp&nbsp&nbsp&nbsp</i> ' +
-      grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+      '<i style="background:' + getColor(magnitude[i] + 1) + '">&nbsp&nbsp&nbsp&nbsp</i> ' +
+      magnitude[i] + (magnitude[i + 1] ? '&ndash;' + magnitude[i + 1] + '<br>' : '+');
   }
 
   return div;
