@@ -79,7 +79,7 @@ legend.onAdd = function (map) {
   
   var div = L.DomUtil.create('div', 'info legend'),
     //Magnitude 
-    grades = [1, 2, 3, 4, 5, 6];
+    grades = [1, 2, 3, 4, 5];
   div.innerHTML = 'Eathquake<br>Magnitude<br><hr>'
 
   for (var i = 0; i < grades.length; i++) {
