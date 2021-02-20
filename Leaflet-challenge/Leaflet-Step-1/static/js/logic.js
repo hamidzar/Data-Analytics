@@ -1,24 +1,26 @@
+//Intiate Leaflet map (map id)  
 var myMap = L.map("map", {
+  //Recenter the map
   center: [37.8968, -119.5828],
   zoom: 3.5,
   });
-console.log("Welcome to Map Creation")
 
-// Title layer
+// Tile layer (initial map) whhich comes from map Box
 L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
-  attribution: "Map data &copy; <a href='https://www.openstreetmap.org/'>OpenStreetMap</a> contributors, <a href='https://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a>, Imagery © <a href='https://www.mapbox.com/'>Mapbox</a>",
+//bottom right hand corner atrribute  
+attribution: "Map data &copy; <a href='https://www.openstreetmap.org/'>OpenStreetMap</a> contributors, <a href='https://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a>, Imagery © <a href='https://www.mapbox.com/'>Mapbox</a>",
   maxZoom: 18,
+  // Type of map box
   id: "mapbox.streets",
   accessToken: API_KEY
 }).addTo(myMap);
 
-/ Link for the geojson data.
+// Link for the geojson data.
 var geodata_url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 // Fetching the data 
 d3.json(geodata_url, function(data) {
-    console.log("Inside function to grab geojson data")
-
+    
     // functions for calculating the color and radius.
   function styleInfo(feature) {
     return {
@@ -60,6 +62,7 @@ d3.json(geodata_url, function(data) {
   
     // GeoJSON layer with the retrieved data
 L.geoJSON(data, {
+// Marker  
 pointToLayer: function (feature, latlong) {
     return L.circleMarker(latlong);
     },
@@ -67,7 +70,7 @@ pointToLayer: function (feature, latlong) {
 style: styleInfo,
 onEachFeature: function(feature, layer) {
     
-  // pop-up with related information 
+  // Add pop-up with related information 
 layer.bindPopup("Earthquake Magnitude: " + feature.properties.mag + "<br>Earthquake Location:<br>" + feature.properties.place);
 }
 }).addTo(myMap);
@@ -79,14 +82,14 @@ legend.onAdd = function (map) {
   
   var div = L.DomUtil.create('div', 'info legend'),
     //Magnitude 
-    magnitude = [1, 2, 3, 4, 5];
+    Grade = [0,1,2,3,4,5];
   div.innerHTML = 'Eathquake<br>Magnitude<br><hr>'
 
-  for (var i = 0; i < magnitude.length; i++) {
+  for (var i = 0; i < Grade.length; i++) {
     div.innerHTML +=
       
-      '<i style="background:' + getColor(magnitude[i] + 1) + '">&nbsp&nbsp&nbsp&nbsp</i> ' +
-      magnitude[i] + (magnitude[i + 1] ? '&ndash;' + magnitude[i + 1] + '<br>' : '+');
+      '<i style="background:' + getColor(Grade[i] + 1) + '">&nbsp&nbsp&nbsp&nbsp</i> ' +
+      Grade[i] + (Grade[i + 1] ? '&ndash;' + Grade[i + 1] + '<br>' : '+');
   }
 
   return div;
