@@ -12,3 +12,9 @@ L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/
   accessToken: API_KEY
 }).addTo(myMap);
 
+/ Link for the geojson data.
+var geodata_url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+
+// Fetching the data 
+d3.json(geodata_url, function(data) {
+    console.log("Inside function to grab geojson data")
