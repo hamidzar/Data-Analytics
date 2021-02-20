@@ -67,3 +67,19 @@ function createMap() {
         id: 'mapbox.outdoors',
         accessToken: API_KEY
     });
+
+    function Color(magnitude) {
+        if (magnitude > 5) {
+          return  "#e76818";
+        } else if (magnitude > 4) {
+            return "#f29e2e";
+        } else if (magnitude > 3) {
+            return "#f9d057";
+        } else if (magnitude > 2) {
+            return "#90eb9d";
+        } else if (magnitude > 1) {
+            return "#00ccbc";
+        } else {
+            return 'green'
+        }
+      };
