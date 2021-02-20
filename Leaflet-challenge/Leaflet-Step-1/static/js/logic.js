@@ -65,3 +65,11 @@ pointToLayer: function (feature, latlong) {
     },
 
 style: styleInfo,
+onEachFeature: function(feature, layer) {
+    
+  // pop-up with related information 
+layer.bindPopup("Earthquake Magnitude: " + feature.properties.mag + "<br>Earthquake Location:<br>" + feature.properties.place);
+}
+}).addTo(myMap);
+
+//legend 
