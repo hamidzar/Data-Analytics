@@ -81,7 +81,19 @@ function createMap() {
         "Outdoors": outdoors,
         "Dark": dark       
     };
+    var overlays = {
+        "Fault Lines": faultline,
+        "Earthquakes": earthquake,
+        
+    };
 
+    var mymap = L.map('map', {
+        center: [37.8968, -119.5828],
+        zoom: 3.5,
+        layers: [satellite, earthquake, faultline]
+    });
+
+    
 }
     function Color(magnitude) {
         if (magnitude > 5) {
