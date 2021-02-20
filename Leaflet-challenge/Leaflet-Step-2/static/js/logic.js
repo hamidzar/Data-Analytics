@@ -68,6 +68,21 @@ function createMap() {
         accessToken: API_KEY
     });
 
+    var dark = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>',
+        maxZoom: 13,
+        id: 'mapbox.dark',
+        accessToken: API_KEY
+    });
+
+    var baseLayers = {
+        "Satellite": satellite,
+        "Grayscale": grayscale,
+        "Outdoors": outdoors,
+        "Dark": dark       
+    };
+
+}
     function Color(magnitude) {
         if (magnitude > 5) {
           return  "#e76818";
