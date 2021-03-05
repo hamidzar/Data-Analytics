@@ -16,5 +16,5 @@ https://10ay.online.tableau.com/#/site/orangehat/views/NY-Citi-Bike/Story?:iid=1
 
 The Analysis/Observation shows:
 
--Bikers who born between 1968 to 1970 shows more interest in long higher mileage biking in 2019 and 2020.
--Grove St Path has more desirable for starting the Bike and ending in both 2019 and 2020
+1.Bikers who born between 1968 to 1970 shows more interest in long higher mileage biking in 2019 and 2020
+2.Grove St Path has more desirable for starting the Bike and ending in both 2019 and 2020
