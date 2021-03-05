@@ -1,7 +1,7 @@
 # NY Citi Bike - Analytics!
 
-Alayzing the the usage of Citi Bike based on the Age, Mileage, Gender, Start Location and End Location for 2019 and 2020 .
-The output data are copied in "output_data" folder
+This analysis is about anlayzing the Citi Bike usage based on the Age, Mileage, Gender, Start Location and End Location for 2019 and 2020 .
+The output data are copied under "Visualization" folder.
 
 # Resouce Files
 
@@ -15,5 +15,6 @@ https://10ay.online.tableau.com/#/site/orangehat/views/NY-Citi-Bike/Story?:iid=1
 # NY Citi Bike - Analysis
 
 The Analysis/Observation shows:
+
 -Bikers who born between 1968 to 1970 shows more interest in long higher mileage biking in 2019 and 2020.
 -Grove St Path has more desirable for starting the Bike and ending in both 2019 and 2020
