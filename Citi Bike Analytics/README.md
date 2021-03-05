@@ -8,9 +8,9 @@ The output data are copied under "Visualization" folder.
 The CSV files that were used are JC-201912-citibike-tripdata.csv.zip and JC-202012-citibike-tripdata.csv.zip.
 These files are downloaded from www.citibikenyc.com
 
-# NY Citi Bike - Tableau Link
+# NY Citi Bike - Tableau Public Link
 
-https://10ay.online.tableau.com/#/site/orangehat/views/NY-Citi-Bike/Story?:iid=1
+https://public.tableau.com/profile/hamid.zarringhalam#!/vizhome/NY-Citi-BikeChallenge/Story
 
 # NY Citi Bike - Analysis
 
