@@ -7,7 +7,6 @@ The output data are copied in "output_data" folder
 
 The CSV files that were used are JC-201912-citibike-tripdata.csv.zip and JC-202012-citibike-tripdata.csv.zip.
 These files are downloaded from www.citibikenyc.com
-Due to size of the CSV files, the CSV files are not uploaded.
 
 # NY Citi Bike - Tableau
 
